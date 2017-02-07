@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (4.3.0)
+  - HandyJSON (1.5.2)
+  - ReachabilitySwift (3)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SnapKit (3.1.2)
+  - SVProgressHUD (2.1.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.3)
+  - HandyJSON (~> 1.5.2)
+  - ReachabilitySwift
+  - SDWebImage
+  - SnapKit (~> 3.1.2)
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  HandyJSON: bb5597b375370dbe4312a27e696341b1f65e4fd7
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+
+PODFILE CHECKSUM: d3e8cc71233cb63ab667e7f67405a221ddb0b75f
+
+COCOAPODS: 1.1.1
