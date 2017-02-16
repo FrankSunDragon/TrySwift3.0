@@ -35,7 +35,7 @@ class TSMainTabBarViewController: UITabBarController {
         vc.title = title
         vc.tabBarItem.image = UIImage(named: img)
         vc.tabBarItem.selectedImage = UIImage(named: img + "_highlighted")
-        let nav =  UINavigationController(rootViewController: vc)
+        let nav =  FDNavigationController(rootViewController: vc)
         
         addChildViewController(nav)
     }

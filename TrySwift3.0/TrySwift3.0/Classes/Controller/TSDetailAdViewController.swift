@@ -24,6 +24,7 @@ class TSDetailAdViewController: FDBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         FD_NavigationBarWithTitle(titlee: "广告详情")
+        
     }
 
     

@@ -104,22 +104,18 @@ class TSAppAdView: UIView {
         }
     }
     
-
     // 移除广告页面
     func dismiss(){
         
-        NotificationCenter.default.post(name: PushAdDetailController, object: infoDict!)
 
-        
        timer.invalidate()
        
-        UIView.animate(withDuration: 1.0) {
+        UIView.animate(withDuration: 0.6) {
            self.removeFromSuperview()
             
         }
     }
 
-    
     
     class private func getBackIMg() ->String?{
         let  screenSize =  UIScreen.main.bounds.size
@@ -149,6 +145,8 @@ class TSAppAdView: UIView {
     
     // 点击广告 跳转到广告页面
     func pushAdWebPage(){
+        NotificationCenter.default.post(name: PushAdDetailController, object: infoDict!)
+
       //  dismiss()
    //  NotificationCenter.default.post(name: SwitchWindowRootViewController, object: infoDict!)
     }

@@ -22,7 +22,6 @@ class FDBaseViewController: UIViewController, TSNoticeLoginDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        hidesBottomBarWhenPushed = true
         view.backgroundColor = TSColor(x: 224, y: 224, z: 224)
     }
 

@@ -85,7 +85,6 @@ private class NewfeatrueCell : UICollectionViewCell{
     
     
     func nextResbonder(){
-        print("点击图片啊")
         if(imageIndex == 3){// 跳出去
      
       NotificationCenter.default.post(name: SwitchWindowRootViewController, object: "收到了吗")

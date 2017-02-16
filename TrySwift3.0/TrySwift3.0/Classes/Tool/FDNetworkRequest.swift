@@ -22,16 +22,16 @@ class FDNetworkRequest {
             .responseJSON { (response) in/*这里使用了闭包*/
                 //当请求后response是我们自定义的，这个变量用于接受服务器响应的信息
                 //使用switch判断请求是否成功，也就是response的result
-                switch response.result {
+                switch response.result{
                 case .success:
                     //当响应成功是，使用临时变量value接受服务器返回的信息并判断是否为[String: AnyObject]类型 如果是那么将其传给其定义方法中的success
                         if let value = response.result.value as? [String: AnyObject] {
                          success(value)
                         }
                     
-                case .failure(let error):
+                case .failure( _):
                     print("请求失败——————————")
-                    failture(error)
+                    failture(response.result.error!)
                 }
         }
     }
@@ -48,10 +48,10 @@ class FDNetworkRequest {
                 if let value = response.result.value as? [String: AnyObject] {
                     success(value)
                 }
-            case .failure(let error):
+            case .failure( _):
                 print("请求失败——————————")
 
-                failture(error)
+                failture(response.result.error!)
             }
             
         }

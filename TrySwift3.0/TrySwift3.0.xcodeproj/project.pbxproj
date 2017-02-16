@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F17E4971E4A1B5C00F94EEE /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17E4961E4A1B5C00F94EEE /* Status.swift */; };
+		0F2778B21E51989300B7CE4F /* TSHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2778B11E51989300B7CE4F /* TSHomeCell.swift */; };
+		0F2778B41E519A7E00B7CE4F /* CellTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2778B31E519A7E00B7CE4F /* CellTopView.swift */; };
+		0F2778B61E52A4DC00B7CE4F /* TSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2778B51E52A4DC00B7CE4F /* TSUser.swift */; };
+		0F2778BC1E54012C00B7CE4F /* Date+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2778BB1E54012C00B7CE4F /* Date+Category.swift */; };
+		0F3ACD5C1E554585008666B9 /* TSPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3ACD5B1E554585008666B9 /* TSPictureView.swift */; };
 		0F6580131E49C632006C6F10 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAB89EE1E49B77E00DAEB0F /* Alamofire.framework */; };
 		0F6580141E49C632006C6F10 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAB89EE1E49B77E00DAEB0F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0F6580151E49C632006C6F10 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FAB89EF1E49B77E00DAEB0F /* HandyJSON.framework */; };
@@ -61,6 +67,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F17E4961E4A1B5C00F94EEE /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		0F2778B11E51989300B7CE4F /* TSHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSHomeCell.swift; sourceTree = "<group>"; };
+		0F2778B31E519A7E00B7CE4F /* CellTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellTopView.swift; sourceTree = "<group>"; };
+		0F2778B51E52A4DC00B7CE4F /* TSUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSUser.swift; sourceTree = "<group>"; };
+		0F2778BB1E54012C00B7CE4F /* Date+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Category.swift"; sourceTree = "<group>"; };
+		0F3ACD5B1E554585008666B9 /* TSPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSPictureView.swift; sourceTree = "<group>"; };
 		0F70FFC21E31C02C0073DA6D /* TSUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSUserAccount.swift; sourceTree = "<group>"; };
 		0F70FFC61E3494420073DA6D /* TSAppAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSAppAdView.swift; sourceTree = "<group>"; };
 		0F854EC11E43741700D0B44C /* TSDetailAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSDetailAdViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +125,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3ACD5A1E5544E1008666B9 /* 首页相关 */ = {
+			isa = PBXGroup;
+			children = (
+				0F2778B11E51989300B7CE4F /* TSHomeCell.swift */,
+				0F2778B31E519A7E00B7CE4F /* CellTopView.swift */,
+				0F3ACD5B1E554585008666B9 /* TSPictureView.swift */,
+			);
+			name = "首页相关";
+			sourceTree = "<group>";
+		};
 		0F70FFC41E3493BE0073DA6D /* 未登录的站位图 */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				0F70FFC21E31C02C0073DA6D /* TSUserAccount.swift */,
+				0F17E4961E4A1B5C00F94EEE /* Status.swift */,
+				0F2778B51E52A4DC00B7CE4F /* TSUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +220,7 @@
 				0FFC7C771E30B1AE00C15CCB /* SwiftFile.swift */,
 				0FFC7C7F1E310BE600C15CCB /* FDNetworkRequest.swift */,
 				0F854EC31E43790000D0B44C /* SYFCLASS.swift */,
+				0F2778BB1E54012C00B7CE4F /* Date+Category.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -203,6 +228,7 @@
 		0FA585D81E2FB9D600554D75 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0F3ACD5A1E5544E1008666B9 /* 首页相关 */,
 				0F70FFC51E3493D90073DA6D /* 广告页 */,
 				0F70FFC41E3493BE0073DA6D /* 未登录的站位图 */,
 			);
@@ -404,6 +430,8 @@
 				0FFC7C721E30A52A00C15CCB /* TSMainTabBarViewController.swift in Sources */,
 				0F854EC21E43741700D0B44C /* TSDetailAdViewController.swift in Sources */,
 				0FA585C11E2FB34A00554D75 /* AppDelegate.swift in Sources */,
+				0F2778B61E52A4DC00B7CE4F /* TSUser.swift in Sources */,
+				0F2778B21E51989300B7CE4F /* TSHomeCell.swift in Sources */,
 				0FFC7C801E310BE600C15CCB /* FDNetworkRequest.swift in Sources */,
 				0FFC7C7E1E30D7B800C15CCB /* TSNoticeLoginView.swift in Sources */,
 				0FA585D31E2FB6A900554D75 /* FDBaseViewController.swift in Sources */,
@@ -412,9 +440,13 @@
 				0F854EC41E43790000D0B44C /* SYFCLASS.swift in Sources */,
 				0FFC7C741E30A92A00C15CCB /* TSHomeViewController.swift in Sources */,
 				0FFC7C781E30B1AE00C15CCB /* SwiftFile.swift in Sources */,
+				0F17E4971E4A1B5C00F94EEE /* Status.swift in Sources */,
 				0FFC7C7A1E30B49000C15CCB /* FDNavigationController.swift in Sources */,
 				0F70FFC31E31C02C0073DA6D /* TSUserAccount.swift in Sources */,
+				0F2778BC1E54012C00B7CE4F /* Date+Category.swift in Sources */,
 				0FFC7C761E30A94200C15CCB /* TSUserCenterViewController.swift in Sources */,
+				0F3ACD5C1E554585008666B9 /* TSPictureView.swift in Sources */,
+				0F2778B41E519A7E00B7CE4F /* CellTopView.swift in Sources */,
 				0FA585DB1E2FBA2200554D75 /* TSNewfeatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -53,12 +53,14 @@ class TSLoginViewController: UIViewController {
           print("返回的结果：\(reslut)")
             
             let sutdent = TSUserAccount(dict: reslut)
-            print(sutdent)
             sutdent.getUserOtherInfo(resulted: { (model, error) in
           
                 if(model != nil){
                 model!.saveAcount()
-                self.closeVC()
+                    // 缓存用户信息成功后，
+                    
+                 NotificationCenter.default.post(name: SwitchWindowRootViewController, object: "23")
+               //  self.closeVC()
             }
             })
         
