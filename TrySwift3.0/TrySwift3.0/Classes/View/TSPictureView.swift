@@ -50,7 +50,7 @@ class TSPictureView: UICollectionView {
         
         if let arr = status!.chatu_small_url{
             if arr.count == 0{
-                layout.itemSize = CGSize.zero
+              //  layout.itemSize = CGSize.zero
                 return (CGSize.zero, CGSize.zero)
 
             }
@@ -78,7 +78,7 @@ class TSPictureView: UICollectionView {
             }
             
         }
-        layout.itemSize = CGSize.zero
+       // layout.itemSize = CGSize.zero
         return (CGSize.zero, CGSize.zero)
     }
 

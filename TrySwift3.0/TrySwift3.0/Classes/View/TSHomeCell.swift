@@ -18,20 +18,21 @@ class TSHomeCell: UITableViewCell {
             topView.tatus = status
             // 正文
             contentLabel.text = status?.text
-            contentLabel.sizeToFit()
+            let sizee = contentLabel.sizeThatFits(CGSize(width: SCREEN_WITH - 20, height: CGFloat(MAXFLOAT)))
+            contentLabel.snp.updateConstraints { (make) in
+                make.height.equalTo(sizee.height)
+            }
             
             pictureView.status = status
             let tuple =  pictureView.calculateImageSize()
             let pictureSize = tuple.viewSize
-            //  print("---------------\(pictureSize)")
             let offset = pictureSize.height == 0 ? 0 : 10
              pictureView.snp.updateConstraints { (make) in
                 make.top.equalTo(contentLabel.snp.bottom).offset(offset)
                 make.width.equalTo(pictureSize.width)
                 make.height.equalTo(pictureSize.height)
             }
-//
-//           pictureView.reloadData()
+            pictureView.reloadData()
         }
     }
     
@@ -52,6 +53,7 @@ class TSHomeCell: UITableViewCell {
         make.top.equalTo(topView.snp.bottom).offset(padding)
         make.left.equalTo(padding)
         make.right.equalTo(-padding)
+        make.height.equalTo(0)
         
     }
     
@@ -61,7 +63,7 @@ class TSHomeCell: UITableViewCell {
         make.left.equalTo(10)
         make.width.equalTo(0)
         make.height.equalTo(0)
-        make.bottom.equalTo(-padding)
+       // make.bottom.equalTo(-padding)
     }
     
     }
@@ -69,9 +71,12 @@ class TSHomeCell: UITableViewCell {
     // 返回cell的高度
     func cellHeight(status : Status) ->CGFloat{
         self.status = status
+        
         self.layoutIfNeeded()
         
-        return pictureView.frame.maxY + CGFloat(padding)
+        let cellHeight = pictureView.frame.maxY + CGFloat(padding)
+        
+        return cellHeight
     }
     
     required init?(coder aDecoder: NSCoder) {

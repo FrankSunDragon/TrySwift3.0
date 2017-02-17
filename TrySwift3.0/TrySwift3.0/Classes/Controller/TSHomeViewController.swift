@@ -23,27 +23,10 @@ class TSHomeViewController: FDBaseViewController, UITableViewDelegate , UITableV
         
         //2\
         setUpTableView()
-        
-        self.tableview?.estimatedRowHeight = 80 + 20
-        
-//        let canletdar = Calendar.current
-//        
-//        
-//        let xxx = canletdar.component(.year, from: Date())
-//       
-////         var ss = canletdar.date(byAdding: .month, value: 2, to: Date())
-////          ss = canletdar.date(byAdding: .day, value: 6, to: ss!)
-//        
-//        
-//          var dateComonent = DateComponents()
-//        dateComonent.month = 7
-//        dateComonent.hour = 1
-//        let xx = canletdar.date(byAdding: dateComonent, to: Date())
-//        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        requestStatusData()
+      //  requestStatusData()
     }
     
     
@@ -103,23 +86,24 @@ class TSHomeViewController: FDBaseViewController, UITableViewDelegate , UITableV
         NotificationCenter.default.removeObserver(self)
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.modelArr.count
     }
     
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 60
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: Identifier) as! TSHomeCell
+          //  tableview?.dequeueReusableCell(withIdentifier: Identifier, for: indexPath) as! TSHomeCell
+        let statusn = self.modelArr[indexPath.row]
+        
+        return cell.cellHeight(status: statusn)
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableview?.dequeueReusableCell(withIdentifier: Identifier, for: indexPath) as! TSHomeCell
-        
         let statusn = self.modelArr[indexPath.row]
         cell.status = statusn
-      //  cell.textLabel?.text = statusn.text!
         return cell
     }
     
